@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
+import * as $ from 'jquery';
+//Ng-select
+import { NgSelectModule } from '@ng-select/ng-select';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [ NgSelectModule, CommonModule, FormsModule ]
+  })
 
 @Component({
-  templateUrl: 'cards.component.html'
+  selector: 'app-dashboard',
+  templateUrl: 'index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class CardsComponent {
-  private fieldArray: Array<any> = [];
-    private newAttribute: any = {};
-
-    addFieldValue() {
-        this.fieldArray.push(this.newAttribute)
-        this.newAttribute = {};
-    }
-
-    deleteFieldValue(index) {
-        this.fieldArray.splice(index, 1);
-    }
+export class IndexComponent implements OnInit {
   cities2 = [
     { id: 1, name: 'Đau đầu' },
     { id: 2, name: 'Đau bụng' },
@@ -30,6 +31,6 @@ export class CardsComponent {
     { id: 12, name: 'Đầy hơi đau bụng' },
     { id: 13, name: 'Ợ nóng mạn tính' }
   ];
-  constructor() { }
-
+  public ngOnInit() {
+  }
 }

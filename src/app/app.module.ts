@@ -18,6 +18,7 @@ import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
+import { IndexComponent } from './views/index/index.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const APP_CONTAINERS = [
@@ -39,9 +40,12 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     AppAsideModule,
@@ -52,7 +56,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgSelectModule
   ],
   declarations: [
     AppComponent,
@@ -60,6 +65,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
+    IndexComponent,
     RegisterComponent
   ],
   providers: [{

@@ -1,4 +1,231 @@
 <div class="animated fadeIn">
+
+  <!--NhatTest-->
+  <div class="card">
+    <div class="row">
+      <div class="col-4" style="padding: 2%">
+        <div class="card">
+          <div class="card-header">
+            <strong>Thông tin cá nhân</strong>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="name">Họ và tên</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="ccnumber">Địa chỉ</label>
+                  <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000">
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label" for="inline-radios">Giới tính</label>
+              <div class="col-md-8 col-form-label">
+                <div class="form-check form-check-inline mr-1" id="inline-radios">
+                  <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Nam</label>
+                </div>
+                <div class="form-check form-check-inline mr-1">
+                  <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label" for="date-input">Ngày sinh</label>
+              <div class="col-md-8">
+                <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+        </div>
+      </div>
+      <div class="col-8" style="padding: 2%">
+        <ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true" placeholder="Chọn triệu chứng"
+          [(ngModel)]="selectedCityIds">
+        </ng-select>
+      </div>
+    </div>
+    <div class="row align-items-center mt-3" style="padding-bottom: 2%">
+      <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+        <button type="button" class="btn btn-primary"><i class="fa fa-lightbulb-o"></i>&nbsp;Chuẩn đoán</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card padding-card">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Kết quả chuẩn đoán
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Loại bệnh</th>
+                  <th>Tên bệnh</th>
+                  <th>Mức độ</th>
+                  <th>Tình trạng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tim</td>
+                  <td>Loạn nhịp tim</td>
+                  <td>1</td>
+                  <td>
+                    <span class="badge badge-secondary">Nhẹ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tim</td>
+                  <td>Nhồi máu cơ tim</td>
+                  <td>5</td>
+                  <td>
+                    <span class="badge badge-warning">Trung bình</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phổi</td>
+                  <td>Ung thư phổi</td>
+                  <td>8</td>
+                  <td>
+                    <span class="badge badge-danger">Khẩn cấp</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Da</td>
+                  <td>Ung thư da</td>
+                  <td>5</td>
+                  <td>
+                    <span class="badge badge-warning">Trung bình</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Não</td>
+                  <td>Viêm màng não</td>
+                  <td>8</td>
+                  <td>
+                    <span class="badge badge-danger">Khẩn cấp</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav style="padding-left: 35%">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <!--/.col-->
+      <div class="col-8">
+        <div class="card text-white bg-primary text-center">
+          <div class="card-body">
+            <blockquote class="card-bodyquote">
+              <p>Giảm lượng thức ăn có dầu mỡ trong khẩu phần ăn.</p>
+            </blockquote>
+          </div>
+        </div>
+        <div class="card text-white bg-primary text-center">
+          <div class="card-body">
+            <blockquote class="card-bodyquote">
+              <p>Nên đi ngủ sớm, thời gian ngủ tốt nhất là từ 10h đến 6h sáng.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+      <div class="col-2">
+      </div>
+    </div>
+  </div>
+
+  <div class="card padding-card">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Thêm luật
+          </div>
+          <div class="card-body">
+              <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="file-input" style="color: rgb(25, 9, 253)">Nhập liệu từ file excel</label>
+                  <div class="col-md-10">
+                    <input type="file" id="file-input" name="file-input">
+                  </div>
+                </div>
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Cột A</th>
+                  <th>Cột B</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let field of fieldArray; let i = index">
+                  <td>
+                    <input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" />
+                  </td>
+                  <td>
+                    <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger" (click)="deleteFieldValue(i)">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="form-control" type="text" id="newAttributeCode" [(ngModel)]="newAttribute.code"
+                      name="newAttributeCode" />
+                  </td>
+                  <td>
+                    <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name"
+                      name="newAttributeName" />
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary" (click)="addFieldValue(i)">Thêm</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center mt-3" style="padding-bottom: 2%">
+      <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+        <button type="button" class="btn btn-primary"><i class="fa fa-dot-circle-o"></i>&nbsp;Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <!--NhatTest-->
+
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="card">
@@ -6,28 +233,37 @@
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
         <div class="card-footer">Card footer</div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-header">
           <i class="fa fa-check"></i>Card with icon
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-header">
@@ -39,10 +275,13 @@
           </label>
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-header">
@@ -50,10 +289,13 @@
           <span class="badge badge-success float-right">Success</span>
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-header">
@@ -61,11 +303,15 @@
           <span class="badge badge-pill badge-danger float-right">42</span>
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="card border-primary">
@@ -73,61 +319,80 @@
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card border-secondary">
         <div class="card-header">
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card border-success">
         <div class="card-header">
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card border-info">
         <div class="card-header">
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card border-warning">
         <div class="card-header">
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card border-danger">
         <div class="card-header">
           Card outline
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
 
   <div class="row">
     <div class="col-sm-6 col-md-4">
@@ -136,61 +401,80 @@
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card card-accent-secondary">
         <div class="card-header">
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card card-accent-success">
         <div class="card-header">
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card card-accent-info">
         <div class="card-header">
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card card-accent-warning">
         <div class="card-header">
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card card-accent-danger">
         <div class="card-header">
           Card with accent
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-primary text-center">
@@ -203,7 +487,8 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-success text-center">
         <div class="card-body">
@@ -215,7 +500,8 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-info text-center">
         <div class="card-body">
@@ -227,7 +513,8 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-warning text-center">
         <div class="card-body">
@@ -239,7 +526,8 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-danger text-center">
         <div class="card-body">
@@ -251,7 +539,8 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-primary text-center">
         <div class="card-body">
@@ -263,8 +552,10 @@
           </blockquote>
         </div>
       </div>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-primary">
@@ -272,49 +563,65 @@
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-success">
         <div class="card-header">
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-info">
         <div class="card-header">
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-warning">
         <div class="card-header">
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-6 col-md-4">
       <div class="card text-white bg-danger">
         <div class="card-header">
           Card title
         </div>
         <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
 </div>

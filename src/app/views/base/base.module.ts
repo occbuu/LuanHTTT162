@@ -46,6 +46,8 @@ import { TooltipsComponent } from './tooltips.component';
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
 
+//Ng-select
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   imports: [
     CommonModule,
@@ -58,7 +60,8 @@ import { BaseRoutingModule } from './base-routing.module';
     PaginationModule.forRoot(),
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    NgSelectModule
   ],
   declarations: [
     CardsComponent,
