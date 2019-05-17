@@ -8,6 +8,8 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { IndexComponent } from './views/index/index.component';
+import { ResultComponent } from './views/result/result.component';
+import { ManagerComponent } from './views/manager/manager.component';
 import { RegisterComponent } from './views/register/register.component';
 
 export const routes: Routes = [
@@ -42,6 +44,20 @@ export const routes: Routes = [
     component: IndexComponent,
     data: {
       title: 'Index Page'
+    }
+  },
+  {
+    path: 'result',
+    component: ResultComponent,
+    data: {
+      title: 'Result Page'
+    }
+  },
+  {
+    path: 'manager',
+    component: ManagerComponent,
+    data: {
+      title: 'Manager Page'
     }
   },
   {

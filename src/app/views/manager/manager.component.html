@@ -1,0 +1,105 @@
+<div class="card padding-card body">
+		<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<i class="fa fa-align-justify"></i> Luật
+						</div>
+						<div class="card-body">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>Cột A</th>
+										<th>Cột B</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let field of fieldArray; let i = index">
+										<td>
+											<input [(ngModel)]="field.code" class="form-control" type="text"
+												name="{{field.code}}" />
+										</td>
+										<td>
+											<input [(ngModel)]="field.name" class="form-control" type="text"
+												name="{{field.name}}" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input class="form-control" type="text" id="newAttributeCode"
+												[(ngModel)]="newAttribute.code" name="newAttributeCode" />
+										</td>
+										<td>
+											<input class="form-control" type="text" id="newAttributeName"
+												[(ngModel)]="newAttribute.name" name="newAttributeName" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<i class="fa fa-align-justify"></i> Thêm luật
+				</div>
+				<div class="card-body">
+					<div class="form-group row">
+						<label class="col-md-2 col-form-label" for="file-input" style="color: rgb(25, 9, 253)">Nhập liệu
+							từ file excel</label>
+						<div class="col-md-10">
+							<input type="file" id="file-input" name="file-input">
+						</div>
+					</div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Cột A</th>
+								<th>Cột B</th>
+								<th>Hành động</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let field of fieldArray; let i = index">
+								<td>
+									<input [(ngModel)]="field.code" class="form-control" type="text"
+										name="{{field.code}}" />
+								</td>
+								<td>
+									<input [(ngModel)]="field.name" class="form-control" type="text"
+										name="{{field.name}}" />
+								</td>
+								<td>
+									<button type="button" class="btn btn-danger"
+										(click)="deleteFieldValue(i)">Xóa</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="form-control" type="text" id="newAttributeCode"
+										[(ngModel)]="newAttribute.code" name="newAttributeCode" />
+								</td>
+								<td>
+									<input class="form-control" type="text" id="newAttributeName"
+										[(ngModel)]="newAttribute.name" name="newAttributeName" />
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary"
+										(click)="addFieldValue(i)">Thêm</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row align-items-center mt-3" style="padding-bottom: 2%">
+		<div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+			<button type="button" class="btn btn-primary"><i class="fa fa-dot-circle-o"></i>&nbsp;Lưu</button>
+		</div>
+	</div>
+</div>

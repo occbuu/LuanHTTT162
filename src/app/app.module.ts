@@ -19,6 +19,8 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { IndexComponent } from './views/index/index.component';
+import { ResultComponent } from './views/result/result.component';
+import { ManagerComponent } from './views/manager/manager.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const APP_CONTAINERS = [
@@ -66,6 +68,8 @@ import { FormsModule } from '@angular/forms';
     P500Component,
     LoginComponent,
     IndexComponent,
+    ResultComponent,
+    ManagerComponent,
     RegisterComponent
   ],
   providers: [{
