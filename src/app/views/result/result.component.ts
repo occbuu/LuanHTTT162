@@ -6,6 +6,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { Router } from "@angular/router";
+
 @NgModule({
   imports: [ NgSelectModule, CommonModule, FormsModule ]
   })
@@ -31,6 +33,12 @@ export class ResultComponent implements OnInit {
     { id: 12, name: 'Đầy hơi đau bụng' },
     { id: 13, name: 'Ợ nóng mạn tính' }
   ];
+  constructor(private router: Router) { }
   public ngOnInit() {
+    
+  }
+
+  clickCancel() {
+    this.router.navigate(['/index']);
   }
 }

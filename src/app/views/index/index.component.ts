@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
-import * as $ from 'jquery';
 //Ng-select
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from "@angular/router";
+
+import * as $ from 'jquery';
 
 @NgModule({
   imports: [ NgSelectModule, CommonModule, FormsModule ]
@@ -31,6 +33,14 @@ export class IndexComponent implements OnInit {
     { id: 12, name: 'Đầy hơi đau bụng' },
     { id: 13, name: 'Ợ nóng mạn tính' }
   ];
+
+  constructor(private router: Router) {
+   }
   public ngOnInit() {
+    
+  }
+
+  onSubmit() {
+      this.router.navigate(['/result']);
   }
 }

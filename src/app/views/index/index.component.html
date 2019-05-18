@@ -1,3 +1,53 @@
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/logo.jpg', width: 65, height: 35, alt: 'CoreUI Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+  [sidebarToggler]="'lg'"
+  [asideMenuToggler]="'lg'">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Users</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Settings</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
+    </li>
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-list"></i></a>
+    </li>
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+    </li>
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+        <img src="assets/img/avatars/9.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+        <div class="dropdown-header text-center"><strong>Account</strong></div>
+        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
+        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
+        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
+        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comment<span class="badge badge-warning">42</span></a>
+        <div class="dropdown-header text-center"><strong>Settings</strong></div>
+        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Setting</a>
+        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-dark">42</span></a>
+        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
+        <div class="divider"></div>
+        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock account</a>
+        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+      </div>
+    </li>
+  </ul>
+</app-header>
 <form id="msform">
 	<!-- progressbar -->
 	<ul id="progressbar">
@@ -29,17 +79,18 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<label class="col-md-12 col-form-label" for="inline-radios">Giới tính</label>
-				<select class="col-md-12">
-					<option value="a">Nam</option>
-					<option value="b">Nữ</option>
-				</select>
+				<label class="col-md-4 col-form-label" for="date-input">Ngày sinh</label>
+				<input id="date-input" type="date" name="date-input" placeholder="date">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<label class="col-md-4 col-form-label" for="date-input">Ngày sinh</label>
-				<input id="date-input" type="date" name="date-input" placeholder="date">
+				<label class="col-md-12 col-form-label" for="inline-radios">Giới tính</label>
+				<div class="col-md-6"></div>
+				<select class="col-md-2">
+					<option value="a">Nam</option>
+					<option value="b">Nữ</option>
+				</select>
 			</div>
 		</div>
 
@@ -62,25 +113,37 @@
 	<fieldset>
 		<h2 class="fs-title">Treament Type</h2>
 		<h3 class="fs-subtitle"></h3>
-		<select>
-			<option value="a">Insuline</option>
-			<option value="b">Oral Treament</option>
-		</select>
+		<div class="col-12" style="padding: 2%">
+			<ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true"
+				placeholder="Chọn triệu chứng" [(ngModel)]="selectedCityIds" name="ngselect1">
+			</ng-select>
+		</div>
+		<input type="number" name="quantity" min="1" max="10" placeholder="Level?">
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">Average Fast Glucose</h2>
 		<h3 class="fs-subtitle"></h3>
-		<input type="number" name="quantity" min="30" max="50" placeholder="Average Fast Glucose?">
+		<div class="col-12" style="padding: 2%">
+			<ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true"
+				placeholder="Chọn triệu chứng" [(ngModel)]="selectedCityIds" name="ngselect1">
+			</ng-select>
+		</div>
+		<input type="number" name="quantity" min="1" max="10" placeholder="Level?">
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">Details</h2>
 		<h3 class="fs-subtitle">HBA1C</h3>
-		<input name="name" placeholder="HBAA1C" class="name" required />
+		<div class="col-12" style="padding: 2%">
+			<ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true"
+				placeholder="Chọn triệu chứng" [(ngModel)]="selectedCityIds" name="ngselect1">
+			</ng-select>
+		</div>
+		<input type="number" name="quantity" min="1" max="10" placeholder="Level?">
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button" value="Diagnostic" />
+		<input (click)="onSubmit()" type="submit" name="submit" class="submit action-button" value="Diagnostic" />
 	</fieldset>
 </form>

@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 export class ManagerComponent implements OnInit {
   private fieldArray: Array<any> = [];
   private newAttribute: any = {};
+  isshowAdd : boolean = false;
 
   addFieldValue() {
     this.fieldArray.push(this.newAttribute)
@@ -28,5 +29,12 @@ export class ManagerComponent implements OnInit {
     this.fieldArray.splice(index, 1);
   }
   public ngOnInit() {
+  }
+
+  showAdd() {
+    console.log('Nhat');
+    if(!this.isshowAdd) {
+      this.isshowAdd = true;
+    }
   }
 }
