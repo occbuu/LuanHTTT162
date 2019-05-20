@@ -23,6 +23,7 @@ export class ManagerComponent implements OnInit {
   addFieldValue() {
     this.fieldArray.push(this.newAttribute)
     this.newAttribute = {};
+    console.log(this.fieldArray);
   }
 
   deleteFieldValue(index) {
@@ -32,7 +33,6 @@ export class ManagerComponent implements OnInit {
   }
 
   showAdd() {
-    console.log('Nhat');
     if(!this.isshowAdd) {
       this.isshowAdd = true;
     }

@@ -72,7 +72,7 @@
               <tbody>
                 <tr>
                   <td>Tim</td>
-                  <td>Loạn nhịp tim</td>
+                  <td (click)="showInfo(1)"><a name="benh1">Loạn nhịp tim</a></td>
                   <td>1</td>
                   <td>
                     <span class="badge badge-secondary">Nhẹ</span>
@@ -80,7 +80,7 @@
                 </tr>
                 <tr>
                   <td>Tim</td>
-                  <td>Nhồi máu cơ tim</td>
+                  <td><a name="benh1" (click)="showInfo(2)">Nhồi máu cơ tim</a></td>
                   <td>5</td>
                   <td>
                     <span class="badge badge-warning">Trung bình</span>
@@ -133,18 +133,13 @@
       <div class="col-2">
       </div>
       <!--/.col-->
-      <div class="col-8">
+      
+      
+      <div class="col-8" *ngIf = "info != ''">
         <div class="card text-white bg-primary text-center">
           <div class="card-body">
             <blockquote class="card-bodyquote">
-              <p>Giảm lượng thức ăn có dầu mỡ trong khẩu phần ăn.</p>
-            </blockquote>
-          </div>
-        </div>
-        <div class="card text-white bg-primary text-center">
-          <div class="card-body">
-            <blockquote class="card-bodyquote">
-              <p>Nên đi ngủ sớm, thời gian ngủ tốt nhất là từ 10h đến 6h sáng.</p>
+              <p>{{info}}</p>
             </blockquote>
           </div>
         </div>

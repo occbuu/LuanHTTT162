@@ -33,6 +33,7 @@ export class ResultComponent implements OnInit {
     { id: 12, name: 'Đầy hơi đau bụng' },
     { id: 13, name: 'Ợ nóng mạn tính' }
   ];
+  info : string = '';
   constructor(private router: Router) { }
   public ngOnInit() {
     
@@ -40,5 +41,14 @@ export class ResultComponent implements OnInit {
 
   clickCancel() {
     this.router.navigate(['/index']);
+  }
+
+  showInfo(id : any) {
+    if(id === 1) {
+      this.info = 'Bệnh rối loạn nhịp tim xảy ra khi tim đập quá nhanh, quá chậm, quá sớm hoặc không đều. Nguyên nhân là do các tín hiệu điện điều phối nhịp đập của tim hoạt động bất thường. Hầu hết rối loạn nhịp tim đều vô hại, nhưng một số có thể nghiêm trọng, thậm chí đe dọa tính mạng. Trong khi loạn nhịp, tim không cung cấp đủ máu cho cơ thể. Thiếu máu có thể làm ảnh hưởng đến não, tim và các cơ quan khác.';
+    }
+    else if(id === 2) {
+      this.info = 'Cơn nhồi máu cơ tim xảy ra khi lòng động mạch vành, dòng máu mang oxy và chất dinh dưỡng đến các tế bào cơ tim đột ngột bị chặn lại hoàn toàn. Vùng cơ tim không được cung cấp máu sẽ bị hoại tử. Đây là một tình trạng khẩn cấp, người bệnh có thể tử vong rất nhanh nếu không được cấp cứu kịp thời, những trường hợp may mắn sống sót thì nguy cơ suy tim trong tương lai cũng rất cao.';
+    }
   }
 }
