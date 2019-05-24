@@ -45,6 +45,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 
+import { ApiProvider } from './providers/api';
+import { LuanProvider } from './providers/luan';
+
 @NgModule({
   imports: [
     FormsModule,
@@ -75,7 +78,10 @@ import { FormsModule } from '@angular/forms';
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }],
-  bootstrap: [ AppComponent ]
+  },
+    ApiProvider,
+    LuanProvider
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
