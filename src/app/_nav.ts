@@ -41,6 +41,69 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
+    name: 'Trang chủ'
+  },
+  {
+    name: 'Trang chủ',
+    url: '/dashboard',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Chẩn bệnh',
+    url: '/base/tabs',
+    icon: 'icon-star'
+  },
+  {
+    title: true,
+    name: 'Bệnh thường gặp'
+  },
+  {
+    name: 'Thông báo',
+    url: '/base/cards',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Thư mời',
+    url: '/base/carousels',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Chỉ thị',
+    url: '/base/collapses',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Đề án',
+    url: '/base/forms',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Kế hoạch',
+    url: '/base/paginations',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Hướng dẫn',
+    url: '/base/popovers',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Báo cáo',
+    url: '/base/progress',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Công văn',
+    url: '/base/switches',
+    icon: 'icon-star'
+  },
+  {
+    name: 'Quyết định',
+    url: '/base/tables',
+    icon: 'icon-star'
+  },
+  {
+    title: true,
     name: 'Theme'
   },
   {
