@@ -11,4 +11,12 @@ export class LuanProvider {
     public Abc(info: any) {
         return this.api.post("luan/abc", info);
     }
+
+    public getGroupTC(info: any) {
+        return this.api.post("luan/read-symptom-type", info);
+    }
+
+    public searchTC(info: any) {
+        return this.api.post("luan/search-symptom", info);
+    }
 }

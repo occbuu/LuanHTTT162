@@ -22,6 +22,7 @@ import { IndexComponent } from './views/index/index.component';
 import { ResultComponent } from './views/result/result.component';
 import { ManagerComponent } from './views/manager/manager.component';
 import { RegisterComponent } from './views/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -62,7 +63,8 @@ import { LuanProvider } from './providers/luan';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,

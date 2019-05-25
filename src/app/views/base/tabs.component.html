@@ -48,14 +48,18 @@
     <div class="col-4"></div>
     <div class="col-5"></div>
     <div class="row col-5">
-      <input type="button" name="previous" class="btn-primary margin-button" value="Kế tiếp" (click)="clickNext()" />
-      <input (click)="onSubmit()" type="submit" name="submit" class="submit action-button margin-button btn-dark"
-        value="Hủy" />
+      <div class="row align-items-center mt-3 margin-button">
+        <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+          <button type="button" class="btn btn-primary" (click)="clickBegin()"><i class="fa fa-lightbulb-o"></i>&nbsp;Kế
+            tiếp</button>
+          <button type="button" class="btn btn-dark"><i class="fa fa-lightbulb-o"></i>&nbsp;Hủy</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="card" *ngIf="curGroupTCid > 0">
+<div class="card" *ngIf="curGroupTCid > 0 && !showResult">
   <div class="row">
     <div class="col-2"></div>
     <div class="col-8" style="padding: 2%">
@@ -65,12 +69,13 @@
         </div>
         <div class="card-body">
           <div class="form-group row text-center">
-            <label class="col-md-12 col-form-label" for="inline-radios">Bạn có bị triệu chứng {{curGroupTCname}}
+            <label class="col-md-12 col-form-label" for="inline-radios">Bạn có bị triệu chứng
+              <strong>{{curGroupTCname}}</strong>
               ko?</label>
             <div class="col-md-12 col-form-label">
               <div class="form-check form-check-inline mr-1" id="inline-radios">
                 <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio1" value="option1"
-                  (click)="clickYes()" [(ngModel)]="yes">
+                  (click)="clickYes(curGroupTCname)" [(ngModel)]="yes">
                 <label class="form-check-label" for="inlineRadio1">Có</label>
               </div>
               <div class="form-check form-check-inline mr-1">
@@ -81,7 +86,7 @@
             </div>
             <div *ngIf="showTC" class="col-12" style="padding: 2%">
               <ng-select [items]="lstTC" bindLabel="name" bindValue="id" [multiple]="true"
-                placeholder="Chọn triệu chứng" [(ngModel)]="selectedCityIds">
+                placeholder="Chọn triệu chứng" [(ngModel)]="curselectedTC">
               </ng-select>
             </div>
           </div>
@@ -89,10 +94,125 @@
       </div>
       <div class="col-2"></div>
       <div class="col-5"></div>
-      <div class="row col-5">
-        <input type="button" name="previous" class="btn-primary margin-button" value="Kế tiếp" (click)="clickNext()" />
-        <input (click)="onSubmit()" type="submit" name="submit" class="submit action-button margin-button btn-dark"
-          value="Quay lại" />
+      <div class="row align-items-center mt-3 margin-button">
+        <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+          <div *ngIf="showFinish">
+            <button type="button" class="btn btn-primary" (click)="clickFinish()"><i class=" fa
+                  fa-lightbulb-o"></i>&nbsp;Chuẩn đoán</button>
+            <button type="button" class="btn btn-dark" (click)="clickBack()"><i class="fa fa-lightbulb-o"></i>&nbsp;Quay
+              lại</button>
+          </div>
+          <div *ngIf="!showFinish">
+            <button type="button" class="btn btn-primary" (click)="clickNext()"><i class=" fa
+                  fa-lightbulb-o"></i>&nbsp;Kế tiếp</button>
+            <button type="button" class="btn btn-dark" (click)="clickBack()"><i class="fa fa-lightbulb-o"></i>&nbsp;Quay
+              lại</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card padding-card" *ngIf="showResult">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Kết quả chuẩn đoán
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Loại bệnh</th>
+                  <th>Tên bệnh</th>
+                  <th>Mức độ</th>
+                  <th>Tình trạng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tim</td>
+                  <td>Loạn nhịp tim</td>
+                  <td>1</td>
+                  <td>
+                    <span class="badge badge-secondary">Nhẹ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tim</td>
+                  <td>Nhồi máu cơ tim</td>
+                  <td>5</td>
+                  <td>
+                    <span class="badge badge-warning">Trung bình</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phổi</td>
+                  <td>Ung thư phổi</td>
+                  <td>8</td>
+                  <td>
+                    <span class="badge badge-danger">Khẩn cấp</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Da</td>
+                  <td>Ung thư da</td>
+                  <td>5</td>
+                  <td>
+                    <span class="badge badge-warning">Trung bình</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Não</td>
+                  <td>Viêm màng não</td>
+                  <td>8</td>
+                  <td>
+                    <span class="badge badge-danger">Khẩn cấp</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav style="padding-left: 35%">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <!--/.col-->
+      <div class="col-8">
+        <div class="card text-white bg-primary text-center">
+          <div class="card-body">
+            <blockquote class="card-bodyquote">
+              <p>Giảm lượng thức ăn có dầu mỡ trong khẩu phần ăn.</p>
+            </blockquote>
+          </div>
+        </div>
+        <div class="card text-white bg-primary text-center">
+          <div class="card-body">
+            <blockquote class="card-bodyquote">
+              <p>Nên đi ngủ sớm, thời gian ngủ tốt nhất là từ 10h đến 6h sáng.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+      <div class="col-2">
       </div>
     </div>
   </div>
