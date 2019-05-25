@@ -1,161 +1,77 @@
 <div class="animated fadeIn">
   <div class="card">
     <div class="card-header">
-      Bootstrap Popover
-      <div class="card-header-actions">
-        <a href="https://valor-software.com/ngx-bootstrap/#/popover" target="_blank">
-          <small className="text-muted">docs</small>
-        </a>
-      </div>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-primary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Live demo
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>positioning</small>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-default btn-secondary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Popover on top"
-              placement="top">
-        Popover on top
-      </button>
-
-      <button type="button" class="btn btn-default btn-secondary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Popover on right"
-              placement="right">
-        Popover on right
-      </button>
-
-      <button type="button" class="btn btn-default btn-secondary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Popover auto"
-              placement="auto">
-        Popover auto
-      </button>
-
-      <button type="button" class="btn btn-default btn-secondary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Popover on left"
-              placement="left">
-        Popover on left
-      </button>
-
-      <button type="button" class="btn btn-default btn-secondary"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Popover on bottom"
-              placement="bottom">
-        Popover on bottom
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small><code>focus</code> trigger</small>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-success"
-              popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-              popoverTitle="Dismissible popover"
-              triggers="focus">
-        Dismissible popover
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>dynamic content</small>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-info"
-              [popover]="content" [popoverTitle]="title">
-        Simple binding
-      </button>
-
-      <ng-template #popTemplate>Just another: {{content}}</ng-template>
-      <button type="button" class="btn btn-warning"
-              [popover]="popTemplate" popoverTitle="Template ref content inside">
-        TemplateRef binding
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>dynamic HTML</small>
-    </div>
-    <div class="card-body">
-      <ng-template #popTemplateHtml>Here we go:
-        <div [innerHtml]="html"></div>
-      </ng-template>
-      <button type="button" class="btn btn-success"
-              [popover]="popTemplateHtml" popoverTitle="Dynamic html inside">
-        Show me popover with html
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>append to <code>body</code></small>
-    </div>
-    <div class="card-body">
-      <div class="row panel" style="position: relative; overflow: hidden;">
-        <div class="card-body panel-body">
-          <button type="button" class="btn btn-danger"
-                  popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-            Default popover
-          </button>
-          <button type="button" class="btn btn-success"
-                  popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-                  container="body">
-            Popover appended to body
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>custom triggers</small>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-info"
-              popover="I will hide on blur"
-              triggers="mouseenter:mouseleave">
-        Hover over me!
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Popover
-      <small>manual triggering</small>
+      <strong>Thông tin bệnh gút</strong>
     </div>
     <div class="card-body">
       <p>
-        <span popover="Hello there! I was triggered manually"
-              triggers="" #pop="bs-popover">
-        This text has attached popover
-        </span>
+        <img class="card-img" src="./assets/img/gut.jpg" />
+        <strong>
+          Gút (bệnh gout) hay thống phong là một bệnh chuyển hóa có triệu chứng nổi bật ở các khớp. Nguyên nhân là do
+          tích tụ nhiều axit uric trong máu. Các axit này sẽ lắng động trong khớp gây ra bệnh. Người mắc bệnh gút thường
+          xuyên bị đau đớn và sưng đỏ các khớp khi đợt viêm cấp bùng phát. Gút là bệnh lành tính và có thể khống chế
+          bằng thuốc cũng như phòng ngừa đợt cấp bằng việc thay đổi chế độ ăn.
+        </strong>
       </p>
-      <button type="button" class="btn btn-success" (click)="pop.show()">
-        Show
-      </button>
-      <button type="button" class="btn btn-warning" (click)="pop.hide()">
-        Hide
-      </button>
+      <h4>1. Bệnh gút (bệnh gout, thống phong) là bệnh gì?</h4>
+      <p>Bệnh gút hay còn gọi là bệnh gout, là một loại viêm khớp đột ngột gây sưng đỏ và đau ở các khớp. Bệnh xảy ra
+        khi axit uric tích tụ trong máu gây ra tình trạng viêm ở khớp. Đặc trưng của bệnh gút là những cơn đau đột ngột
+        giữa đêm gây sưng tấy ở khớp, đặc biệt là các khớp ở ngón chân cái, nhưng cũng có thể ảnh hưởng tới các khớp ở
+        chân khác (đầu gối, mắt cá chân, bàn chân) và ít gặp hơn ở khớp tay (bàn tay, cổ tay, khuỷu tay). Cột sống cũng
+        có thể bị ảnh hưởng, nhưng thường rất hiếm.</p>
+      <p>Mặc dù bệnh có thể gây khó chịu và thậm chí làm bạn bị stress và mất ngủ trong thời gian dài do đây là bệnh mãn
+        tính, gút vẫn có thể chữa trị được và bạn có thể phòng tránh bệnh tái phát dễ dàng.
+      </p>
+      <h4>2. Triệu chứng bệnh gút.</h4>
+      <p>Dấu hiệu bệnh gút thường xảy ra đột ngột và vào ban đêm. Trong một số trường hợp, bệnh gout không có dấu hiệu
+        ban đầu. Các biểu hiện của bệnh gút thường xuất hiện khi người bệnh đã từng mắc gout cấp tính hoặc mãn tính. Sau
+        đây là các triệu chứng chính:
+        Khớp đau đột ngột, dữ dội, sưng tấy và thường xảy ra vào sáng sớm.
+        Cảm thấy nóng và đau nghiêm trọng ở khớp khi đụng vào.
+        Khớp chuyển sang màu sưng đỏ.
+        Cảm thấy vùng xung quanh khớp ấm lên.</p>
+      <p>Các triệu chứng bệnh gút thường xuất hiện đột ngột vào ban đêm. Hầu hết các biểu hiện của bệnh gút thường kéo
+        dài vài giờ trong 1–2 ngày. Tuy nhiên, đối với trường hợp nặng, cơn đau có thể xảy ra trong vòng vài tuần.
+        Ngoài ra, một người bị gút từ 6–12 tháng với cường độ khác nhau mỗi ngày. Đây là một tình trạng khá nghiêm
+        trọng, vì vậy bạn cần đến gặp bác sĩ ngay lập tức.</p>
+      <h4>3. Các giai đoạn của bệnh gút là gì?</h4>
+      <p>Giai đoạn 1. Ở giai đoạn này, mức axit uric trong máu đã tăng lên nhưng vẫn chưa xuất hiện các triệu chứng bệnh
+        gút. Bạn có thể không bao giờ cảm nhận được các dấu hiệu của bệnh. Thông thường, người bệnh chỉ nhận thấy triệu
+        chứng đầu tiên của bệnh gout sau khi họ bị bệnh sỏi thận.</p>
+      <p>Giai đoạn 2. Ở giai đoạn này, nồng độ axit uric lúc này rất cao, dẫn đến hình thành các tinh thể xuất hiện ở
+        ngón chân. Trong giai đoạn này, bạn sẽ cảm thấy đau khớp nhưng cơn đau sẽ không kéo dài. Một thời gian sau, bạn
+        sẽ gặp các triệu chứng khác của bệnh gout với cường độ và tần suất ngày càng gia tăng.</p>
+      <p>Giai đoạn 3. Ở giai đoạn 3 này, các triệu chứng của bệnh sẽ không biến mất và các tinh thể axit uric sẽ tấn
+        công nhiều khớp. Đây là giai đoạn sẽ xuất hiện các khối chất nổi dưới da. Tình trạng này sẽ làm bạn bị đau
+        nghiêm trọng hơn và có thể phá hủy sụn.</p>
+      <h4>4. Nguyên nhân gây bệnh gút.</h4>
+      <p>Gút là bệnh do rối loạn chuyển hóa purin trong thận khiến thận không thể lọc axit uric từ trong máu. Axit uric
+        thường vô hại và được hình thành trong cơ thể. Chúng sẽ được đào thải qua nước tiểu và phân. Với những bệnh nhân
+        bị gout, lượng axit uric trong máu được tích tụ qua thời gian. Khi nồng độ này quá cao, những tinh thể nhỏ của
+        axit uric được hình thành. Những tinh thể này tập trung lại ở khớp và gây viêm, sưng và đau đớn cho bệnh nhân.
+      </p>
+      <p>Nguyên nhân nào làm cho axit uric tăng cao trong cơ thể? Nguyên nhân chính gây ra tình trạng này là do bạn
+        thường xuyên tiêu thụ những thực phẩm chứa purine. Purine là chất có sẵn trong cơ thể, nhưng một số thực phẩm
+        cũng chứa nhiều chất này. Bạn càng ăn nhiều purine, bạn càng có nguy cơ cao mắc bệnh gout.
+      </p>
+      <p>Khi mắc bệnh gút, cơn đau cấp có thể xuất hiện nếu bạn bị thương, mắc bệnh cấp tính, phẫu thuật, ăn quá nhiều
+        thức ăn hoặc uống rượu.</p>
+      <h4>5. Điều trị hiệu quả bệnh gút.</h4>
+      <p>Phân tích chất lỏng hoạt dịch.
+        Thử máu. Xét nghiệm nhằm giúp bác sĩ xác định lượng axit uric có cao hay không.
+        Chụp X-quang khớp.
+        Siêu âm khớp.
+        Chụp CT.</p>
+      <p>Giảm cân nếu bạn đang béo phì.
+        Tránh ăn nội tạng, nhất là gan, cá mòi và cá trống.
+        Ngừng uống rượu.
+        Giảm sử dụng các thức uống có cồn, đặc biệt là bia.
+        Tập thể dục hằng ngày.
+        Uống cà phê và bổ sung vitamin C (có thể có ích ở một số người).
+        Hạn chế ăn các loại thực phẩm chứa nhiều purine.
+        Có chế độ ăn ít chất béo bão hòa và các sản phẩm chứa ít chất béo.
+        Thay thế dùng đường tinh luyện bằng đường tự nhiên trong rau củ và ngũ cốc.
+        Tránh ăn hải sản và thịt đỏ.</p>
     </div>
   </div>
 </div>

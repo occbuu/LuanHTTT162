@@ -1,137 +1,67 @@
 <div class="animated fadeIn">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          Bootstrap Carousel
-          <div class="card-header-actions">
-            <a href="https://valor-software.com/ngx-bootstrap/#/carousel" target="_blank">
-              <small className="text-muted">docs</small>
-            </a>
-          </div>
-        </div>
-        <div class="card-body">
-          <carousel [interval]="3000">
-            <slide>
-              <img src="https://loremflickr.com/900/500/mountains?lock=1" alt="First slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/mountains?lock=2" alt="Second slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/mountains?lock=3" alt="Third slide" style="display: block; width: 100%;">
-            </slide>
-          </carousel>
-        </div>
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <strong>Thông tin bệnh sốt xuất huyết</strong>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          Carousel
-          <small> optional captions</small>
-        </div>
-        <div class="card-body">
-          <carousel [interval]="4500">
-            <slide>
-              <img src="https://loremflickr.com/900/500/nature?lock=1" alt="First slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/nature?lock=2" alt="Second slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/nature?lock=3" alt="Third slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              </div>
-            </slide>
-          </carousel>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          Carousel
-          <small> configuring defaults</small>
-        </div>
-        <div class="card-body">
-          <carousel>
-            <slide>
-              <img src="https://loremflickr.com/900/500/city?lock=1" alt="First slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/city?lock=2" alt="Second slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </slide>
-            <slide>
-              <img src="https://loremflickr.com/900/500/city?lock=3" alt="Third slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              </div>
-            </slide>
-          </carousel>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          Carousel
-          <small> dynamic slides</small>
-        </div>
-        <div class="card-body">
-          <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
-            <slide *ngFor="let slide of slides; let index=index">
-              <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
-
-              <div class="carousel-caption">
-                <h4>Slide {{index}}</h4>
-                <p>{{slide.text}}</p>
-              </div>
-            </slide>
-          </carousel>
-          <br/>
-          <div>
-            <button type="button" class="btn btn-info"
-                    (click)="addSlide()">Add Slide
-            </button>
-            <button type="button" class="btn btn-info"
-                    (click)="removeSlide()">Remove Current
-            </button>
-            <button type="button" class="btn btn-info"
-                    (click)="removeSlide(2)">Remove #3
-            </button>
-          </div>
-          <div>
-            <div class="checkbox">
-              <label><input type="checkbox" [(ngModel)]="noWrapSlides">Disable Slide Looping</label>
-            </div>
-
-            <span>Interval, in milliseconds (Enter a negative number or 0 to stop the interval.): </span>
-            <input type="number" class="form-control" [(ngModel)]="myInterval">
-          </div>
-        </div>
-      </div>
+    <div class="card-body">
+      <p>
+        <img class="card-img" src="./assets/img/sxh1.jpg" />
+        <strong>
+          Hiện nay, tình hình dịch bệnh sốt xuất huyết tại một số tỉnh thành trên cả nước đang diễn biến phức tạp. Nhiều
+          bệnh nhân đã chủ quan không đi khám tự điều trị tại nhà dẫn đến bệnh chuyển biến nặng. Vậy bệnh sốt xuất huyết
+          nguy hiểm như thế nào? Khi mắc bệnh cần xử trí ra sao?
+        </strong>
+      </p>
+      <h4>1. Bệnh sốt xuất huyết là gì?</h4>
+      <p>Sốt xuất huyết là bệnh truyền nhiễm cấp tính do virus Dengue gây ra. Nguyên nhân lây lan bệnh là do muỗi vằn
+        truyền virus Dengue từ người bệnh sang người khỏe mạnh. Bệnh sốt xuất huyết đôi khi có thể gây đau nhức rất trầm
+        trọng ở cơ và khớp.</p>
+      <p>
+        Bệnh xảy ra quanh năm, thường gia tăng vào mùa mưa. Bệnh gặp ở cả trẻ em và người lớn. Bệnh sốt xuất huyết dạng
+        nhẹ sẽ gây sốt cao, phát ban, đau cơ và khớp, rối loạn đông máu, suy đa tạng... Nếu không được chẩn đoán sớm và
+        điều trị kịp thời dễ dẫn đến dễ dẫn đến sốt xuất huyết dạng nặng, có thể gây chảy máu nặng, giảm huyết áp đột
+        ngột (sốc) và tử vong.
+      </p>
+      <h4>2. Triệu chứng sốt xuất huyết</h4>
+      <p>Những người lần đầu tiên mắc bệnh bị loại này vì họ chưa có miễn dịch với bệnh. Đây là dạng có biểu hiện các
+        triệu chứng điển hình và không có biến chứng. Bệnh thường bắt đầu với triệu chứng sốt và sẽ kéo dài trong vòng
+        4-7 ngày tính từ sau khi bị truyền bệnh bởi muỗi. Ngoài ra, còn có các triệu chứng như:</p>
+      <p>Các ban sốt xuất huyết có thể xuất hiện trên cơ thể 3-4 ngày sau khi bắt đầu sốt và sau đó thuyên giảm sau 1-2
+        ngày. Bạn có thể bị nổi ban lại một lần nữa vào ngày sau đó.</p>
+      <p>Các dấu hiệu sốt xuất huyết dạng này bao gồm tất cả các triệu chứng của bệnh sốt xuất huyết nhẹ kèm theo tổn
+        thương mạch máu và mạch bạch huyết, chảy máu cam, chảy máu ở nướu hoặc dưới da, gây ra vết bầm tím. Thể bệnh này
+        có thể dẫn đến tử vong.</p>
+      <p>Trẻ em khi mắc bệnh sốt xuất huyết từ 3 ngày sẽ có những dấu hiệu sốt cao, khiến bố mẹ thường nhầm là cảm cúm
+        hay nhiễm khuẩn đường hô hấp.</p>
+      <p>Thể bệnh này là dạng nặng nhất của bệnh sốt xuất huyết – bao gồm tất cả các biểu hiện của bệnh sốt xuất huyết
+        nhẹ cộng với các triệu chứng chảy máu, kèm theo huyết tương thoát khỏi mạch máu, chảy máu ồ ạt trong và ngoài cơ
+        thể, sốc (huyết áp thấp).</p>
+      <h4>3. Diễn biến của bệnh sốt xuất huyết như thế nào?</h4>
+      <p>Giai đoạn sốt: Sốt cao đột ngột 39 - 40 độ C, sốt liên tục, uống thuốc hạ sốt nhưng không giảm nhiệt độ.
+        Nhức đầu, chán ăn, buồn nôn.
+        Da xung huyết.
+        Đau cơ, đau khớp, nhức hai hố mắt.
+        Thường có chấm xuất huyết ở dưới da, chảy máu chân răng hoặc chảy máu cam.</p>
+      <p>Giai đoạn nguy hiểm: Biểu hiện thoát huyết tương do tăng tính thấm thành mạch (thường kéo dài 24 - 48 giờ).
+        Tràn dịch màng phổi có biểu hiện: Đau ngực, cảm giác tức nặng ngực, đau ngực tăng khi thay đổi tư thế, khó thở.
+        Tràn dịch màng bụng: Bụng to nhanh, chướng bụng, khó thở.
+        Gan to: Đau tức vùng hạ sườn phải hoặc vùng thượng vị.</p>
+      <p>Xuất huyết:Xuất huyết dưới da: Nốt xuất huyết hoặc mảng xuất huyết thường ở mặt trước hai cẳng chân và mặt
+        trong hai cánh tay, bụng, đùi, mạng sườn.
+        Xuất huyết ở niêm mạc: Chảy máu mũi, lợi, tiểu ra máu. Kinh nguyệt kéo dài hoặc xuất hiện kinh sớm hơn kỳ hạn.
+        Xuất huyết nội tạng như tiêu hóa, phổi, não với biểu hiện nôn ra máu, đi tiểu ra máu, ho ra máu, ra máu âm đạo
+        bất thường, rong kinh....
+      </p>
+      <h4>4. Những điều cần chú ý khi điều trị sốt xuất huyết tại nhà.</h4>
+      <p>Sốt xuất huyết chưa có thuốc điều trị đặc hiệu, chủ yếu là điều trị triệu chứng, người bệnh cần tuân thủ theo
+        hướng dẫn của bác sĩ, tự theo dõi sát tại nhà, đến bệnh viện làm xét nghiệm theo hẹn.</p>
+      <p>Nếu sốt cao ≥ 39 độ C, uống thuốc hạ sốt, nới lỏng quần áo và lau mát bằng nước ấm. Thuốc hạ sốt chỉ được dùng
+        là paracetamol đơn chất, liều dùng từ 10 - 15 mg/kg cân nặng/lần (ví dụ một người 50kg có thể uống 1 viên
+        paracetamol 500mg/lần), mỗi lần uống cách nhau mỗi 4-6 giờ. Tổng liều paracetamol không quá 60mg/kg cân nặng/24h
+        (một người 50kg không uống quá 3000mg/ngày)</p>
+      <p>Tuyệt đối không dùng aspirin (acetyl salicylic acid), analgin, ibuprofen để điều trị vì có thể gây xuất huyết,
+        toan máu.</p>
+      <p>Bù dịch bằng cách uống oresol (pha đúng theo hướng dẫn), nước cam, nước chanh...</p>
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'collapses.component.html'
+  templateUrl: 'collapses.component.html',
+  styleUrls: ['common.component.css']
 })
 export class CollapsesComponent {
 

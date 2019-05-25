@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'forms.component.html'
+  templateUrl: 'forms.component.html',
+  styleUrls: ['common.component.css']
 })
 export class FormsComponent {
 

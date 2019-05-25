@@ -1,83 +1,65 @@
 <div class="animated fadeIn">
   <div class="card">
     <div class="card-header">
-      Bootstrap Pagination
-      <div class="card-header-actions">
-        <a href="https://valor-software.com/ngx-bootstrap/#/pagination" target="_blank">
-          <small className="text-muted">docs</small>
-        </a>
-      </div>
+      <strong>Thông tin bệnh lao phổi</strong>
     </div>
     <div class="card-body">
-      <div class="row">
-        <div class="col-xs-12 col-12 d-sm-down-none">
-          <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
-        </div>
-        <div class="col-xs-12 col-12">
-          <pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm" [maxSize]="6"
-                      previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
-        </div>
-        <div class="col-xs-12 col-12 d-sm-down-none">
-          <pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="totalItems"
-                      [(ngModel)]="currentPage"></pagination>
-        </div>
-        <div class="col-xs-12 col-12">
-          <pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage"
-                      (numPages)="smallnumPages = $event"></pagination>
-        </div>
-      </div>
-      <pre class="card card-body card-header mb-3">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
-    </div>
-    <div class="card-footer">
-      <button type="button" class="btn btn-info" (click)="setPage(3)">Set current page to: 3</button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Pagination <small>states & limits</small>
-    </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-12 col-12">
-          <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
-                      previousText="&lsaquo;" nextText="&rsaquo;" [boundaryLinks]="true"></pagination>
-        </div>
-
-        <div class="col-xs-12 col-12">
-          <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
-                      previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"
-                      [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
-        </div>
-      </div>
-      <pre class="card card-body card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Pager
-    </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xs-12 col-12 col-md-6">
-          <pagination
-            [directionLinks]="false"
-            [totalItems]="totalItems"
-            [(ngModel)]="currentPager"
-            (numPages)="smallnumPages = $event">
-          </pagination>
-        </div>
-
-        <div class="col-xs-12 col-12 col-md-6">
-          <pager
-            [totalItems]="totalItems"
-            [(ngModel)]="currentPager"
-            (pageChanged)="pageChanged($event)"
-            pageBtnClass="btn"
-            [itemsPerPage]="10"
-            class="pull-left">
-          </pager>
-        </div>
-      </div>
+      <p>
+        <img class="card-img" src="./assets/img/laophoi1.jpg" />
+        <strong>
+          Bệnh lao phổi là bệnh truyền nhiễm nguy hiểm dễ gây tử vong ở người bệnh. Hiện nay với tiến bộ của y học hiện
+          đại lao phổi đã được chữa khỏi hoàn toàn.
+        </strong>
+      </p>
+      <h4>1. Bệnh lao phổi là gì?</h4>
+      <p>Bệnh lao phổi là bệnh truyền nhiễm thường do vi khuẩn Mycobacterium tuberculosis (MTB) gây ra. Được chia thành
+        hai thể chính là lao phổi và lao ngoài phổi.</p>
+      <p>
+        Lao phổi (lao hoạt tính) chiếm hơn 80% các trường hợp mắc lao. Trường hợp này người bệnh xét nghiệm đờm có vi
+        khuẩn lao là nguồn lây truyền lao phổi cho người sống xung quanh.
+      </p>
+      <p>Đối với người bị nghi ngờ mắc bệnh lao phổi, khi xét nghiệm soi đờm trực tiếp thấy có vi khuẩn lao thì người
+        bệnh được chẩn đoán là lao phổi AFB(+) và ngược lại là lao phổi AFB(-).</p>
+      <p>Bệnh lao ngoài phổi không có nguy cơ lây nhiễm cho người khác. Gồm nhiều loại như lao màng phổi, lao hạch bạch
+        huyết, lao màng não, lao xương khớp, lao màng bụng, lao hệ sinh dịch - tiết niệu, lao ruột.</p>
+      <h4>2. Nguyên nhân gây bệnh lao phổi.</h4>
+      <p>Vi khuẩn Mycobacterim tuberculosis (MTB) là nguyên nhân chính gây bệnh lao phổi và lây lan từ người sang người
+        qua đường hô hấp. Bệnh lao phổi không di truyền.</p>
+      <p>Môi trường ô nhiễm nhiều khói bụi, ẩm ướt là điều kiện thuận lợi để vi khuẩn lao phát triển và gây bệnh.
+        Tiếp xúc với người bệnh lao phổi hoặc các chất thải chứa vi khuẩn lao có thể bị lây nhiễm.
+        Sử dụng thực phẩm chứa vi khuẩn lao, ăn vật nuôi bị nhiễm lao cũng có thể bị nhiễm lao.</p>
+      <p>Hệ miễn dịch suy yếu: Người có hệ miễn dịch suy yếu sẽ có nguy cơ cao bị vi khuẩn lao phổi hoạt động. Ví dụ,
+        người bệnh HIV khó kiểm soát vi khuẩn lao hơn nên có nguy cơ mắc bệnh lao phổi cao hơn 20 - 30% so với người
+        không bị HIV.</p>
+      <p>Hút thuốc lá: Theo thống kê khoảng 8% các trường hợp bệnh lao trên toàn thế giới có liên quan đến hút thuốc lá.
+      </p>
+      <h4>3. Triệu chứng bệnh lao phổi</h4>
+      <p>Ho kéo dài hơn 3 tuần.
+        Đau ngực.
+        Ho ra máu.
+        Cảm thấy mệt mỏi mọi lúc.
+        Đổ mồ hôi trộm về đêm.
+        Ớn lạnh.
+        Sốt.
+        Ăn không ngon.
+        Sút cân.</p>
+      <h4>4. Biến chứng của bệnh lao phổi</h4>
+      <p>Tràn dịch, tràn khí màng phổi, ho ra máu. Những biến chứng này khiến cho việc điều trị lao phổi khó khăn và
+        phức tạp hơn nhiều.</p>
+      <p>Sau khi chữa khỏi lao phổi vẫn có thể để lại một số di chứng sau: Suy hô hấp mãn, giãn phế quản, u nấm phổi,
+        tràn khí màng phổi...
+      </p>
+      <h4>5. Điều trị bệnh lao.</h4>
+      <p>Hầu hết các trường hợp lao phổi đều có thể chữa khỏi được khi điều trị đúng phương pháp và đúng thuốc. Loại
+        thuốc thường được dùng để điều trị bệnh lao phổi là thuốc kháng sinh. Sử dụng loại nào và điều trị trong bao lâu
+        sẽ phụ thuộc vào các yếu tố:
+        Sức khỏe người bệnh,
+        Độ tuổi,
+        Khả năng đề kháng với thuốc,
+        Loại lao mắc phải là lao phổi hay lao ngoài phổi.</p>
+      <p>Đối với những người mắc bệnh lao ngoài phổi chỉ cần dùng một loại kháng sinh lao, trong khi đó những người bị
+        bệnh lao phổi thường phải dùng nhiều loại thuốc.
+        Thuốc kháng sinh điều trị bệnh thường được yêu cầu dùng trong một thời gian dài, thường khoảng 6 tháng.</p>
     </div>
   </div>
 </div>

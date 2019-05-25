@@ -1,59 +1,78 @@
 <div class="animated fadeIn">
   <div class="card">
     <div class="card-header">
-      Bootstrap Progress
-      <div class="card-header-actions">
-        <a href="https://valor-software.com/ngx-bootstrap/#/progressbar" target="_blank">
-          <small className="text-muted">docs</small>
-        </a>
-      </div>
+      <strong>Thông tin bệnh đau xương khớp</strong>
     </div>
     <div class="card-body">
-      <div class="row">
-        <div class="col-sm-4">
-          <progressbar class="progress" [value]="55" [max]="100"></progressbar>
-        </div>
-        <div class="col-sm-4">
-          <progressbar class="progress progress-striped" [value]="22" [max]="100" type="warning">22%</progressbar>
-        </div>
-        <div class="col-sm-4">
-          <progressbar class="progress progress-striped active" [max]="200" [value]="166" type="danger"><i>166 / 200</i></progressbar>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Progress <small>dynamic</small>
-    </div>
-    <div class="card-body">
-      <progressbar class="progress progress-striped progress-animated" [max]="max" [value]="dynamic">
-        <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
-      </progressbar>
-
-      <small><em>No animation</em></small>
-      <progressbar class="progress progress-success" [value]="dynamic" [max]="100" type="success"><b>{{dynamic}}%</b></progressbar>
-
-      <small><em>Object (changes type based on value)</em></small>
-      <progressbar class="progress-bar progress-bar-striped progress-bar-animated" [value]="dynamic" [max]="max" [type]="type">
-        {{type}} <i *ngIf="showWarning">!!! Watch out !!!</i>
-      </progressbar>
-      <br>
-      <button type="button" class="btn btn-sm btn-primary" (click)="random()">Randomize</button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      Progress <small>stacked</small>
-    </div>
-    <div class="card-body">
-      <div class="row col-lg-12">
-        <progressbar class="progress" [value]="stacked" [max]="100"></progressbar>
-      </div>
-      <br>
-      <div class="row col-md-12">
-        <button type="button" class="btn btn-sm btn-primary" (click)="randomize()">{{buttonCaption}} randomize</button>
-      </div>
+      <p>
+        <img class="card-img" src="./assets/img/dauxuongkhop.jpg" />
+        <strong>
+          Đau nhức xương khớp ngày càng phổ biến, không chỉ ở người già mà ở cả giới trẻ. Nếu không được phát hiện sớm
+          và điều trị kịp thời có thể gây tàn phế. Vậy nguyên nhân đau xương khớp là gì, cách điều trị, phòng ngừa như
+          thế nào?
+        </strong>
+      </p>
+      <h4>1. Đau nhức xương khớp là gì, nguy hiểm không?</h4>
+      <p>Tình trạng đau nhức xương khớp là thuật ngữ dùng để chỉ triệu chứng tê mỏi, đau dữ dội hoặc âm ỉ các khớp xương
+        trên cơ thể. Tình trạng này xảy ra khi các sụn khớp, đốt sống bị tổn thương, bào mòn, thoái hóa… đầu xương tỳ
+        trực tiếp lên nhau, đĩa đệm mất dần tính đàn hồi.
+      </p>
+      <p>Trước kia, chứng đau nhức toàn thân vẫn được mặc định là căn bệnh của người già. Thế nhưng thực tế cho thấy, số
+        người trẻ tuổi mắc phải chứng bệnh này đang gia tăng với tỷ lệ đáng báo động.
+        Đau nhức xương khớp không những ảnh hưởng đến chất lượng đời sống của người bệnh mà còn tiềm ẩn nhiều biến chứng
+        nguy hiểm. Nếu không được điều trị kịp thời, người bệnh sẽ bị hạn chế vận động, tê yếu tứ chi, thậm chí bại liệt
+        hoàn toàn.
+      </p>
+      <h4>2. Nguyên nhân đau nhức xương khớp toàn thân.</h4>
+      <p>Thay đổi thời tiết: Thời tiết là nguyên nhân đầu tiên gây ra những cơn đau nhức ê ẩm khắp người, phổ biến nhất
+        ở đối tượng trung niên và người cao tuổi. Vào thời điểm chuyển từ mùa thu sang đông, các triệu chứng đau ở toàn
+        thân sẽ khiến người bệnh cực kỳ mệt mỏi, càng về đêm và rạng sáng, cơn đau lại càng nghiêm trọng.</p>
+      <p>Đặc thù công việc: Những người bị đau nhức xương khớp thường hay phải làm các công việc với đặc thù ngồi nhiều
+        hay đứng một chỗ trong thời gian dài… như dân văn phòng, tài xế lái xe hay công nhân may là đối tượng có khả
+        năng mắc phải chứng đau nhức, tê bì chân tay rất cao.</p>
+      <p>Thói quen sinh hoạt: lười vận động, chơi thể thao quá độ, nằm ngủ không đúng tư thế… có thể khiến mạch máu bị
+        chèn ép, không lưu thông được đến các cơ xương khớp trên cơ thể gây tê bì và đau mỏi.</p>
+      <p>Viêm đa khớp dạng thấp: Các khớp xương trên cơ thể bị sưng viêm có thể dẫn đến triệu chứng đau nhức xương khớp
+        dạng đối xứng. Ngoài ra, bệnh nhân bị viêm khớp dạng thấp còn phải đối mặt cơn đau mỏi, cơ cứng khớp, nổi hạt
+        khớp dưới da.</p>
+      <p>Thoát vị đĩa đệm: Người bệnh bị thoát vị đĩa đệm cổ sẽ cảm nhận được những cơn đau mỏi, tê buốt cổ vai gáy,
+        đỉnh đầu và lan xuống cánh tay, trong khi bệnh nhân thoát vị đĩa đệm lưng lại phải đối mặt với các triệu chứng
+        tương tự ở lưng, hông, đùi và bàn chân theo đường đi của dây thần kinh tọa.</p>
+      <p>Thoái hóa xương khớp: Bất cứ vùng xương khớp nào trên cơ thể cũng có thể là “nạn nhân” của quá trình lão hóa
+        sinh học. Khi bước vào độ tuổi 30, sụn khớp bắt đầu bị bào mòn, đĩa đệm cột sống mất dần tính thẩm thấu, rễ thần
+        kinh bị chèn ép gây đau nhức xương khớp, ê mỏi, tê bì xương khớp, chân tay.</p>
+      <h4>3. Đau nhức xương khớp nên ăn gì ?</h4>
+      <p>Chuối: Chuối là một trong những thực phẩm tốt cho xương khớp vì chúng chứa nhiều magie và kali là hai nguyên tố
+        vi lượng cần thiết tăng khả năng hấp thụ canxi, giúp xương chắc khỏe.</p>
+      <p>Cá hồi: Acid béo omega-3 có trong cá hồi giúp kích thích quá trình lưu thông máu, giảm nhẹ triệu chứng đau, hạn
+        chế tình trạng co cứng khớp. Omega-3 cũng được tìm thấy nhiều trong các loại cá thu, cá ngừ, cá mòi và cá trích.
+        Từ cá hồi, chúng ta có thể chế biến những món ăn tốt cho xương khớp.</p>
+      <p>Đậu nành: Đậu nành và các chế phẩm từ đậu nành chứa nhiều chất béo có lợi, giàu protein và chất xơ, là thực
+        phẩm lành mạnh tốt sức khỏe nói chung và người mắc bệnh khớp nói riêng. Các loại protein có trong đậu nành được
+        chứng minh là có tác dụng giảm đau, sưng khớp.</p>
+      <p>Bơ đậu phộng: Vitamin B3 được tìm thấy trong bơ đậu phộng có thể giúp cải thiện phần nào đó tình trạng viêm,
+        giảm nhanh các cơn đau nhức xương khớp, cứng khớp ở những người mắc bệnh xương khớp.</p>
+      <p>Tôm hùm: Tôm hùm chứa nhiều vitamin E – là một chất chống oxy hóa của cơ thể, đồng thời có lợi cho việc lưu
+        thông máu, tăng cường khả năng tưới máu đến nuôi dưỡng các khớp. Các món ăn chế biến từ tôm hùm cũng được xem là
+        những thức ăn bổ xương khớp.</p>
+      <p>Trà xanh: Nếu hỏi ăn gì tốt cho người bệnh đau nhức xương khớp, cải thiện những khó chịu do quá trình lão hóa
+        hệ vận động thì trà xanh cũng là một trong những lựa chọn tốt. Trà xanh có đặc tính chống viêm, các hoạt chất
+        trong trà xanh ức chế các hóa chất và enzyme gây hại cho xương khớp.</p>
+      <h4>4. Các cách điều trị đau nhức xương khớp.</h4>
+      <p>Thuốc giảm đau: Bao gồm nhóm thuốc kháng viêm không steroid, thuốc ức chế COX-2 hay các loại thuốc như
+        Tramadol, Pregabalin (Lyrica)… Khi sử dụng cần lưu ý đến một số tác dụng phụ của thuốc như viêm loét dạ dày,
+        xuất huyết đường tiêu hóa, tổn thương gan, thận, chán ăn, buồn nôn…
+      </p>
+      <p>Thuốc giãn cơ: Chống lại tình trạng đâu nhức xương khớp có liên quan đến hiện tượng co thắt cơ. Thường dùng
+        nhất là các loại thuốc như Myonal, Mydocalm, Coltramyl… Thuốc có thể gây ra một số tác dụng phụ như hạ huyết áp,
+        chậm nhịp tim, buồn ngủ, ảo giác… nếu bệnh nhân lạm dụng.
+      </p>
+      <p>Dây đau xương: Giã nhỏ 100g dây đau xương rồi trộn với rượu đắp lên vùng bị đau nhức. Ngoài ra, bệnh nhân nên
+        sử dụng bài thuốc sắc từ dây đau xương hàng ngày để nhận được kết quả tốt nhất.</p>
+      <p>Bài thuốc chữa đau nhức xương khớp bằng tre nướng: Nhồi vào ống tre tươi ít lá lốt, ngải cứu, thêm chút giấm
+        nuôi rồi nướng lên. Dùng phần nước cốt thu được xoa bóp toàn thân sẽ thấy cơn đau thuyên giảm rõ rệt..</p>
+      <p>Mật ong và bột quế: Pha 1 thìa cà phê bột quế và mật ong vào cốc nước ấm rồi uống ngày 1 lần. Bài thuốc giúp
+        giải tỏa căng thẳng, mệt mỏi và đau nhức xương khớp rất hiệu quả, được nhiều người kiểm chứng.</p>
     </div>
   </div>
 </div>

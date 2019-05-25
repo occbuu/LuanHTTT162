@@ -3,7 +3,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 
 
 @Component({
-  templateUrl: 'popovers.component.html'
+  templateUrl: 'popovers.component.html',
+  styleUrls: ['common.component.css']
 })
 export class PopoversComponent {
 

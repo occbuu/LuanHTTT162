@@ -1,26 +1,49 @@
 <div class="animated fadeIn">
   <div class="card">
     <div class="card-header">
-      Bootstrap Collapse
-      <div class="card-header-actions">
-        <a href="https://valor-software.com/ngx-bootstrap/#/collapse" target="_blank">
-          <small className="text-muted">docs</small>
-        </a>
-      </div>
+      <strong>Thông tin bệnh sởi</strong>
     </div>
-    <div class="card-body"
-         (collapsed)="collapsed($event)"
-         (expanded)="expanded($event)"
-         [collapse]="isCollapsed">
+    <div class="card-body" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed">
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-        consequat.
+        <img class="card-img" src="./assets/img/soi1.jpg" />
+        <strong>
+          Với tình trạng các ca nhiễm bệnh sởi ngày càng tăng cao đặc biệt là ở trẻ nhỏ, cha mẹ hãy tham khảo bài viết
+          dưới đây để có những hiểu biết cần thiết trong việc theo dõi, phát hiện sớm và chăm sóc trẻ đúng cách nếu trẻ
+          bị sởi.
+        </strong>
       </p>
-    </div>
-    <div class="card-footer">
-      <button type="button" class="btn btn-primary"
-              (click)="isCollapsed = !isCollapsed">Toggle collapse
-      </button>
+      <h4>1. Bệnh sởi là gì? Bệnh lây truyền qua những đường nào?</h4>
+      <p>Bệnh sởi là bệnh truyền nhiễm cấp tính do virus Paramyxoviridae gây ra. Bệnh hay xuất hiện vào thời điểm đông -
+        xuân, là bệnh thường gặp ở trẻ em, nhưng cũng xuất hiện ở người lớn, khả năng gây thành dịch cao.</p>
+      <p>
+        Bệnh sởi là bệnh truyền nhiễm cấp tính do virus, lây qua đường không khí, do đó khả năng bùng phát thành dịch
+        rất cao, nhất là ở những quần thể có tỷ lệ miễn dịch thấp với bệnh.
+      </p>
+      <h4>2. Những ai dễ mắc bệnh sởi?</h4>
+      <p>Tất cả những ai chưa có miễn dịch với bệnh sởi đều có nguy cơ mắc bệnh, tuy nhiên bệnh hay gặp ở trẻ em. Mức độ
+        nặng hay nhẹ của bệnh trên mỗi người cũng không giống nhau, phụ thuộc sức đề kháng của từng cá thể.
+        Sau khi mắc sởi, bệnh nhân sẽ có miễn dịch bền vững với bệnh.</p>
+      <h4>3. Triệu chứng khi mắc bệnh sởi?</h4>
+      <p>Khi bị mắc sởi, có thể khái quát các triệu chứng bệnh sởi là: Sốt, phát ban, ho, viêm kết mạc mắt (mắt đỏ),
+        chảy nước mũi.</p>
+      <p>Bệnh sởi có giai đoạn ủ bệnh thông thường từ 12-14 ngày, có thể kéo dài đến 21 ngày, và có thể lây truyền từ 1
+        ngày trước khi bắt đầu giai đoạn tiền triệu (khoảng 4 ngày trước khi phát ban) đến 4 ngày sau khi xuất hiện ban,
+        ít nhất là sau ngày thứ 2 phát ban.</p>
+      <p>Khi bệnh sởi khởi phát, bệnh nhân thường biểu hiện bằng: sốt cao, viêm kết mạc, viêm long đường hô hấp trên,
+        viêm thanh quản cấp, có thể xuất hiện các hạt Koplik. Sau sốt 3-4 ngày, ban bắt đầu xuất hiện, ban dát sẩn, màu
+        hồng, xuất hiện lần lượt theo thứ tự từ sau tai, trán, xuống vùng ngực, lưng, rồi xuống đùi và bàn chân. Khi ban
+        mất đi cũng mất theo thứ tự trên, ban bong vảy để lại vết thâm trên da.</p>
+      <h4>4. Người mắc bệnh sởi cần được chăm sóc như thế nào?</h4>
+      <p>Cần cách ly bệnh nhân, cho bệnh nhân đeo khẩu trang y tế, tránh để bệnh nhân tiếp xúc với nhiều người.
+        Bệnh nhân nên nghỉ ngơi tại buồng thoáng khí, đủ ánh sáng (tránh ánh sáng mạnh vì bệnh nhân có thể sợ ánh sáng).
+        Buồng nên vệ sinh sạch sẽ thường xuyên.</p>
+      <p>Ngủ đủ giấc, nghỉ ngơi nhiều.
+        Giữ cho cơ thể đủ ấm, vệ sinh thân thể, vệ sinh răng miệng tốt, tuyệt đối không kiêng nước, kiêng gió.</p>
+      <p>Nhỏ mắt, mũi bằng dung dịch nước muối sinh lý 0,9% hoặc có thể sử dụng dung dịch nhỏ mắt mũi chuyên dùng, mỗi
+        ngày nhỏ 3-4 lần.
+        Chú ý chế độ dinh dưỡng nhằm nâng cao thể trạng cho người bệnh. Nên cho bệnh nhân ăn thức ăn dễ tiêu, ăn thành
+        nhiều bữa. Bổ sung thêm vào bữa ăn các thức ăn giàu Vitamin (đặc biệt là thức ăn giàu Vitamin A). Với trẻ bú mẹ,
+        tiếp tục cho trẻ ăn sữa mẹ, khi bị tiêu chảy trẻ cần được bú nhiều hơn</p>
     </div>
   </div>
 </div>

@@ -31,15 +31,6 @@ export interface NavData {
 
 export const navItems: NavData[] = [
   {
-    name: 'Dashboard',
-    url: '/dashboard',
-    icon: 'icon-speedometer',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
-  },
-  {
     title: true,
     name: 'Trang chủ'
   },
@@ -58,51 +49,46 @@ export const navItems: NavData[] = [
     name: 'Bệnh thường gặp'
   },
   {
-    name: 'Thông báo',
+    name: 'Viêm màng não',
     url: '/base/cards',
     icon: 'icon-star'
   },
   {
-    name: 'Thư mời',
+    name: 'Sốt xuất huyết',
     url: '/base/carousels',
     icon: 'icon-star'
   },
   {
-    name: 'Chỉ thị',
+    name: 'Sởi',
     url: '/base/collapses',
     icon: 'icon-star'
   },
   {
-    name: 'Đề án',
+    name: 'HIV',
     url: '/base/forms',
     icon: 'icon-star'
   },
   {
-    name: 'Kế hoạch',
+    name: 'Lao phổi',
     url: '/base/paginations',
     icon: 'icon-star'
   },
   {
-    name: 'Hướng dẫn',
+    name: 'Gút',
     url: '/base/popovers',
     icon: 'icon-star'
   },
   {
-    name: 'Báo cáo',
+    name: 'Đau xương khớp',
     url: '/base/progress',
     icon: 'icon-star'
   },
   {
-    name: 'Công văn',
+    name: 'Ung thư',
     url: '/base/switches',
     icon: 'icon-star'
-  },
-  {
-    name: 'Quyết định',
-    url: '/base/tables',
-    icon: 'icon-star'
-  },
-  {
+  }
+  /*{
     title: true,
     name: 'Theme'
   },
@@ -333,5 +319,5 @@ export const navItems: NavData[] = [
     icon: 'icon-layers',
     variant: 'danger',
     attributes: { target: '_blank', rel: 'noopener' }
-  }
+  }*/
 ];
