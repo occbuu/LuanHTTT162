@@ -19,4 +19,8 @@ export class LuanProvider {
     public searchTC(info: any) {
         return this.api.post("luan/search-symptom", info);
     }
+
+    public diagnostic(info: any) {
+        return this.api.post("luan/diagnostic", info);
+    }
 }

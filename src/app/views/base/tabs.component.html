@@ -11,7 +11,7 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label for="name">Họ và tên</label>
-                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A">
+                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A" [(ngModel)]="name">
               </div>
             </div>
           </div>
@@ -19,7 +19,8 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label for="ccnumber">Địa chỉ</label>
-                <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000">
+                <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000"
+                  [(ngModel)]="address">
               </div>
             </div>
           </div>
@@ -27,7 +28,8 @@
             <label class="col-md-4 col-form-label" for="inline-radios">Giới tính</label>
             <div class="col-md-8 col-form-label">
               <div class="form-check form-check-inline mr-1" id="inline-radios">
-                <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio1" value="option1"
+                  checked>
                 <label class="form-check-label" for="inlineRadio1">Nam</label>
               </div>
               <div class="form-check form-check-inline mr-1">
@@ -39,7 +41,8 @@
           <div class="form-group row">
             <label class="col-md-4 col-form-label" for="date-input">Ngày sinh</label>
             <div class="col-md-8">
-              <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+              <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"
+                [(ngModel)]="dob">
             </div>
           </div>
         </div>
@@ -115,14 +118,14 @@
 </div>
 
 <div class="card padding-card" *ngIf="showResult">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-align-justify"></i> Kết quả chuẩn đoán
-          </div>
-          <div class="card-body">
-            <table class="table table-bordered table-striped table-sm">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Kết quả chuẩn đoán
+        </div>
+        <div class="card-body">
+          <!--<table class="table table-bordered table-striped table-sm">
               <thead>
                 <tr>
                   <th>Loại bệnh</th>
@@ -185,34 +188,37 @@
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
               </ul>
-            </nav>
+            </nav>-->
+          <p class="title-result">- Họ và tên: <strong>{{name}}</strong></p>
+          <p class="title-result">- Địa chỉ: <strong>{{address}}</strong></p>
+          <p class="title-result">- Giới tính: <strong>Nam</strong></p>
+          <p class="title-result">- Ngày sinh: <strong>{{dob}}</strong></p>
+          <hr>
+          <p class="title-result">*Các triệu chứng mắc phải:
+            <strong>
+              <div *ngFor="let i of symptom">- {{i}}</div>
+            </strong>
+          </p>
+          <p class="title-result">*Chẩn đoán bệnh:</p>
+          <div *ngIf="!isDisease"> <strong>- Không bị bệnh.</strong></div>
+          <div *ngFor="let i of disease">
+            <p class="body-result">- {{i.name}}</p>
+            <p class="title-result">*Độ chính xác:</p>
+            <div *ngIf="i.ruleType === 1">
+              <strong>- 100%</strong>
+            </div>
+            <div *ngIf="i.ruleType === 2">
+              <strong>- 70%</strong>
+            </div>
+            <div *ngIf="i.ruleType === 3">
+              <strong>- 30%</strong>
+            </div>
+            <p class="title-result">*Lời khuyên:</p>
+            <strong>- Update lời khuyên...</strong>
           </div>
         </div>
       </div>
-      <!--/.col-->
     </div>
-    <div class="row">
-      <div class="col-2">
-      </div>
-      <!--/.col-->
-      <div class="col-8">
-        <div class="card text-white bg-primary text-center">
-          <div class="card-body">
-            <blockquote class="card-bodyquote">
-              <p>Giảm lượng thức ăn có dầu mỡ trong khẩu phần ăn.</p>
-            </blockquote>
-          </div>
-        </div>
-        <div class="card text-white bg-primary text-center">
-          <div class="card-body">
-            <blockquote class="card-bodyquote">
-              <p>Nên đi ngủ sớm, thời gian ngủ tốt nhất là từ 10h đến 6h sáng.</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-      <!--/.col-->
-      <div class="col-2">
-      </div>
-    </div>
+    <!--/.col-->
   </div>
+</div>

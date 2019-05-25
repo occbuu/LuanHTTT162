@@ -14,6 +14,7 @@ export class TabsComponent {
   no: boolean;
   showResult: boolean = false;
   showFinish: boolean = false;
+  isDisease: boolean = false;
 
   groupTC: any[];
   maxIdGroupTC = 0;
@@ -21,7 +22,14 @@ export class TabsComponent {
   curGroupTCname: string = '';
   lstTC: any[];
   curselectedTC: any[];
-  selectedTC: any[];
+  selectedTC = new Array();
+  symptom: any[];
+  disease: any[];
+
+  //info person
+  name: string;
+  address: string;
+  dob: string;
 
   constructor(private proLuan: LuanProvider,
     public http: HttpClient) {
@@ -41,9 +49,6 @@ export class TabsComponent {
     this.proLuan.searchTC(info).subscribe((rsp: any) => {
       if (rsp.variant === HTTP.STATUS_SUCCESS) {
         this.lstTC = rsp.data;
-        if (this.selectedTC != null) {
-          this.lstTC.push(this.selectedTC[0]);
-        }
       }
     }, (err) => {
       console.log(err);
@@ -60,6 +65,10 @@ export class TabsComponent {
   }
 
   clickNext() {
+    for (var i = 0; i < this.curselectedTC.length; i++) {
+      this.selectedTC.push(this.curselectedTC[i]);
+    }
+    this.curselectedTC = [];
     if (this.curGroupTCid < this.maxIdGroupTC) {
       //reset
       this.yes = false;
@@ -92,7 +101,20 @@ export class TabsComponent {
 
   clickFinish() {
     this.showResult = true;
-    console.log(this.curselectedTC);
+    console.log(this.selectedTC);
+    this.proLuan.diagnostic(this.selectedTC).subscribe((rsp: any) => {
+      if (rsp.variant === HTTP.STATUS_SUCCESS) {
+        this.symptom = rsp.data.symptom;
+        this.disease = rsp.data.disease;
+        console.log(this.symptom);
+        console.log(this.disease);
+        if(this.disease.length > 0) {
+          this.isDisease = true;
+        }
+      }
+    }, (err) => {
+      console.log(err);
+    });
   }
 
 }

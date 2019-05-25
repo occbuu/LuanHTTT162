@@ -11,3 +11,13 @@
     margin-right: auto;
     width: 50%;
 }
+
+.title-result {
+    font-size: 130%;
+}
+
+.body-result {
+    font-size: 130%;
+    color: red;
+    font-weight: bold;
+}
