@@ -65,8 +65,10 @@ export class TabsComponent {
   }
 
   clickNext() {
-    for (var i = 0; i < this.curselectedTC.length; i++) {
-      this.selectedTC.push(this.curselectedTC[i]);
+    if (this.curselectedTC != null) {
+      for (var i = 0; i < this.curselectedTC.length; i++) {
+        this.selectedTC.push(this.curselectedTC[i]);
+      }
     }
     this.curselectedTC = [];
     if (this.curGroupTCid < this.maxIdGroupTC) {
@@ -108,7 +110,7 @@ export class TabsComponent {
         this.disease = rsp.data.disease;
         console.log(this.symptom);
         console.log(this.disease);
-        if(this.disease.length > 0) {
+        if (this.disease.length > 0) {
           this.isDisease = true;
         }
       }
