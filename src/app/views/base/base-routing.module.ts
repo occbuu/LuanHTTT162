@@ -12,6 +12,7 @@ import { PaginationsComponent } from './paginations.component';
 import {PopoversComponent} from './popovers.component';
 import {ProgressComponent} from './progress.component';
 import {TooltipsComponent} from './tooltips.component';
+import { DiseaseComponent } from './disease.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,13 @@ const routes: Routes = [
       title: 'Base'
     },
     children: [
+      {
+        path: 'disease',
+        component: DiseaseComponent,
+        data: {
+          title: 'Disease'
+        }
+      },
       {
         path: '',
         redirectTo: 'cards'
