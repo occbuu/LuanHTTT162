@@ -27,4 +27,12 @@ export class LuanProvider {
     public readDisease(info: any) {
         return this.api.post("luan/read-disease", info);
     }
+
+    public readRule(info: any) {
+        return this.api.post("luan/read-rule", info);
+    }
+
+    public readPatientData(info: any) {
+        return this.api.post("luan/read-patient-data", info);
+    }
 }

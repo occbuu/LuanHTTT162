@@ -4,10 +4,10 @@ import { HTTP } from '../../utilities';
 import { BaseComponent } from './base.component';
 
 @Component({
-    templateUrl: 'disease.component.html',
+    templateUrl: 'patient-data.component.html',
     styleUrls: ['./common.component.css']
 })
-export class DiseaseComponent extends BaseComponent implements OnInit {
+export class PatientDataComponent extends BaseComponent implements OnInit {
 
     settings = {
         selectMode: 'single',  //single|multi
@@ -24,23 +24,68 @@ export class DiseaseComponent extends BaseComponent implements OnInit {
         },
         noDataMessage: 'No data found',
         columns: {
-            code: {
-                title: 'Code',
+            age: {
+                title: 'Age',
                 type: 'string',
                 filter: false
             },
-            name: {
-                title: 'Name',
+            sex: {
+                title: 'Sex',
                 type: 'string',
                 filter: false
             },
-            chapter: {
-                title: 'Chapter',
+            symptons: {
+                title: 'Symptons',
+                type: 'string',
+                filter: false
+            },
+            originalHealth: {
+                title: 'OriginalHealth',
+                type: 'string',
+                filter: false
+            },
+            bloodPressure: {
+                title: 'BloodPressure',
+                type: 'string',
+                filter: false
+            },
+            bloodPressureP: {
+                title: 'BloodPressureP',
+                type: 'string',
+                filter: false
+            },
+            bloodPressureN: {
+                title: 'BloodPressureN',
+                type: 'string',
+                filter: false
+            },
+            temperature: {
+                title: 'Temperature',
+                type: 'string',
+                filter: false
+            },
+            bloodVessel: {
+                title: 'BloodVessel',
+                type: 'string',
+                filter: false
+            },
+            nDays: {
+                title: 'NDays',
                 type: 'string',
                 filter: false
             },
             description: {
                 title: 'Description',
+                type: 'string',
+                filter: false
+            },
+            resultDisease1: {
+                title: 'ResultDisease1',
+                type: 'string',
+                filter: false
+            },
+            resultDisease2: {
+                title: 'ResultDisease2',
                 type: 'string',
                 filter: false
             },
@@ -68,7 +113,7 @@ export class DiseaseComponent extends BaseComponent implements OnInit {
             "paging": true
         };
 
-        this.proLuan.readDisease(x).subscribe((rsp: any) => {
+        this.proLuan.readPatientData(x).subscribe((rsp: any) => {
             if (rsp.variant === HTTP.STATUS_SUCCESS) {
                 this.data = rsp.data;
 

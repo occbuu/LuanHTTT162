@@ -4,10 +4,10 @@ import { HTTP } from '../../utilities';
 import { BaseComponent } from './base.component';
 
 @Component({
-    templateUrl: 'disease.component.html',
+    templateUrl: 'symptom.component.html',
     styleUrls: ['./common.component.css']
 })
-export class DiseaseComponent extends BaseComponent implements OnInit {
+export class SymptomComponent extends BaseComponent implements OnInit {
 
     settings = {
         selectMode: 'single',  //single|multi
@@ -24,18 +24,13 @@ export class DiseaseComponent extends BaseComponent implements OnInit {
         },
         noDataMessage: 'No data found',
         columns: {
-            code: {
-                title: 'Code',
+            group: {
+                title: 'Group',
                 type: 'string',
                 filter: false
             },
             name: {
                 title: 'Name',
-                type: 'string',
-                filter: false
-            },
-            chapter: {
-                title: 'Chapter',
                 type: 'string',
                 filter: false
             },
@@ -68,7 +63,7 @@ export class DiseaseComponent extends BaseComponent implements OnInit {
             "paging": true
         };
 
-        this.proLuan.readDisease(x).subscribe((rsp: any) => {
+        this.proLuan.searchTC(x).subscribe((rsp: any) => {
             if (rsp.variant === HTTP.STATUS_SUCCESS) {
                 this.data = rsp.data;
 

@@ -1,22 +1,20 @@
 <div class="card">
     <div class="card-body">
-        <h3>Dịch bệnh</h3>
+        <h3>Triệu chứng</h3>
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Code</th>
+                        <th>Group</th>
                         <th>Name</th>
-                        <th>Chapter</th>
                         <th>Description</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let i of data">
-                        <td>{{i.code}}</td>
+                        <td>{{i.group}}</td>
                         <td>{{i.name}}</td>
-                        <td>{{i.chapter}}</td>
                         <td>{{i.description}}</td>
                         <td>
                             <span class="badge badge-success">{{i.status == 1 ? 'Active' : 'Inactive'}}</span>
@@ -63,7 +61,7 @@
                     </span>
                 </nav>
             </div>
-            
+
         </div>
     </div>
 </div>

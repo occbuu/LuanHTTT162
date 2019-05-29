@@ -9,10 +9,13 @@ import { TabsComponent } from './tabs.component';
 import { CarouselsComponent } from './carousels.component';
 import { CollapsesComponent } from './collapses.component';
 import { PaginationsComponent } from './paginations.component';
-import {PopoversComponent} from './popovers.component';
-import {ProgressComponent} from './progress.component';
-import {TooltipsComponent} from './tooltips.component';
+import { PopoversComponent } from './popovers.component';
+import { ProgressComponent } from './progress.component';
+import { TooltipsComponent } from './tooltips.component';
 import { DiseaseComponent } from './disease.component';
+import { RuleComponent } from './rule.component';
+import { SymptomComponent } from './symptom.component';
+import { PatientDataComponent } from './patient-data.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,27 @@ const routes: Routes = [
         component: DiseaseComponent,
         data: {
           title: 'Disease'
+        }
+      },
+      {
+        path: 'rule',
+        component: RuleComponent,
+        data: {
+          title: 'Rule'
+        }
+      },
+      {
+        path: 'symptom',
+        component: SymptomComponent,
+        data: {
+          title: 'Sympton'
+        }
+      },
+      {
+        path: 'patient-data',
+        component: PatientDataComponent,
+        data: {
+          title: 'Patient Data'
         }
       },
       {
@@ -117,4 +141,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BaseRoutingModule {}
+export class BaseRoutingModule { }

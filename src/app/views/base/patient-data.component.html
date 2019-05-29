@@ -1,23 +1,39 @@
 <div class="card">
     <div class="card-body">
-        <h3>Dịch bệnh</h3>
+        <h3>Bệnh án</h3>
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Code</th>
-                        <th>Name</th>
-                        <th>Chapter</th>
-                        <th>Description</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Symptons</th>
+                        <th>OriginalHealth</th>
+                        <th>BloodPressure</th>
+                        <th>BloodPressureP</th>
+                        <th>BloodPressureN</th>
+                        <th>Temperature</th>
+                        <th>BloodVessel</th>
+                        <th>NDays</th>
+                        <th>ResultDisease1</th>
+                        <th>ResultDisease2</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let i of data">
-                        <td>{{i.code}}</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.chapter}}</td>
-                        <td>{{i.description}}</td>
+                        <td>{{i.age}}</td>
+                        <td>{{i.sex}}</td>
+                        <td>{{i.symptons}}</td>
+                        <td>{{i.originalHealth}}</td>
+                        <td>{{i.bloodPressure}}</td>
+                        <td>{{i.bloodPressureP}}</td>
+                        <td>{{i.bloodPressureN}}</td>
+                        <td>{{i.temperature}}</td>
+                        <td>{{i.bloodVessel}}</td>
+                        <td>{{i.nDays}}</td>
+                        <td>{{i.resultDisease1}}</td>
+                        <td>{{i.resultDisease2}}</td>
                         <td>
                             <span class="badge badge-success">{{i.status == 1 ? 'Active' : 'Inactive'}}</span>
                         </td>
@@ -63,7 +79,7 @@
                     </span>
                 </nav>
             </div>
-            
+
         </div>
     </div>
 </div>

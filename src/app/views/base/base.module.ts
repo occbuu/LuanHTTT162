@@ -49,6 +49,9 @@ import { BaseRoutingModule } from './base-routing.module';
 //Ng-select
 import { NgSelectModule } from '@ng-select/ng-select';
 import { DiseaseComponent } from './disease.component';
+import { RuleComponent } from './rule.component';
+import { SymptomComponent } from './symptom.component';
+import { PatientDataComponent } from './patient-data.component';
 
 @NgModule({
   imports: [
@@ -77,7 +80,10 @@ import { DiseaseComponent } from './disease.component';
     PopoversComponent,
     ProgressComponent,
     TooltipsComponent,
-    DiseaseComponent
+    DiseaseComponent,
+    RuleComponent,
+    SymptomComponent,
+    PatientDataComponent
   ]
 })
 export class BaseModule { }

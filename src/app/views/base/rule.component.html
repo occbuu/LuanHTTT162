@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h3>Dịch bệnh</h3>
+        <h3>Luật</h3>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -14,10 +14,10 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let i of data">
-                        <td>{{i.code}}</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.chapter}}</td>
-                        <td>{{i.description}}</td>
+                        <td>{{i.vt}}</td>
+                        <td>{{i.vp}}</td>
+                        <td>{{i.ruleType}}</td>
+                        <td>{{i.note}}</td>
                         <td>
                             <span class="badge badge-success">{{i.status == 1 ? 'Active' : 'Inactive'}}</span>
                         </td>
