@@ -10,5 +10,34 @@
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
 .padding-card {
-  padding: 2%  
+    padding: 2%  
+}
+
+.app-header .nav-item {    
+    height: 50px;
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+}
+
+ul > li > ul {
+    display: none;
+}
+
+ul > li:not(:last-child) {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+ul > li:hover > ul {
+    width: 170px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    text-align: left;
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 100, .3) 0px 0px 2px;
 }
