@@ -50,8 +50,6 @@ import { BaseRoutingModule } from './base-routing.module';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { DiseaseComponent } from './disease.component';
 
-import { Ng2SmartTableModule } from 'ng2-smart-table';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -65,8 +63,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),
-    NgSelectModule,
-    Ng2SmartTableModule
+    NgSelectModule
   ],
   declarations: [
     CardsComponent,
