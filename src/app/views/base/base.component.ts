@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    //templateUrl: 'disease.component.html',
-    //styleUrls: ['./common.component.css']
+    template: '<span><span>'
 })
 export class BaseComponent implements OnInit {
 

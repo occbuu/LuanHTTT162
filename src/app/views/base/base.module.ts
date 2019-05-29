@@ -52,6 +52,7 @@ import { DiseaseComponent } from './disease.component';
 import { RuleComponent } from './rule.component';
 import { SymptomComponent } from './symptom.component';
 import { PatientDataComponent } from './patient-data.component';
+import { BaseComponent } from './base.component';
 
 @NgModule({
   imports: [
@@ -83,7 +84,8 @@ import { PatientDataComponent } from './patient-data.component';
     DiseaseComponent,
     RuleComponent,
     SymptomComponent,
-    PatientDataComponent
+    PatientDataComponent,
+    BaseComponent
   ]
 })
 export class BaseModule { }

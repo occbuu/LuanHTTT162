@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [ NgSelectModule, CommonModule, FormsModule ]
-  })
+  imports: [NgSelectModule, CommonModule, FormsModule]
+})
 
 @Component({
   selector: 'app-dashboard',
@@ -16,9 +16,9 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./manager.component.css']
 })
 export class ManagerComponent implements OnInit {
-  private fieldArray: Array<any> = [];
+  fieldArray: Array<any> = [];
   private newAttribute: any = {};
-  isshowAdd : boolean = false;
+  isshowAdd: boolean = false;
 
   addFieldValue() {
     this.fieldArray.push(this.newAttribute)
@@ -33,7 +33,7 @@ export class ManagerComponent implements OnInit {
   }
 
   showAdd() {
-    if(!this.isshowAdd) {
+    if (!this.isshowAdd) {
       this.isshowAdd = true;
     }
   }

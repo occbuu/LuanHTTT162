@@ -33,6 +33,7 @@ export class IndexComponent implements OnInit {
     { id: 12, name: 'Đầy hơi đau bụng' },
     { id: 13, name: 'Ợ nóng mạn tính' }
   ];
+  selectedCityIds;
 
   constructor(private router: Router) {
    }
